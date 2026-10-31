@@ -118,8 +118,10 @@ public class WindowTests
         w.Input.Text = "4G";
         w.Send();
         Assert.Contains("isn't hex", w.Entries[^1].Text);
-        // Stopped first: the demo's next lines would otherwise arrive between the clear and the check.
+        // Stopped first, and what it had already sent collected: the window's timer would otherwise show those
+        // lines between the clear and the check.
         w.ToggleConnection();
+        w.Tick();
         Key(w, Avalonia.Input.Key.L, RawInputModifiers.Control);
         Assert.Empty(w.Entries);
         w.Close();
