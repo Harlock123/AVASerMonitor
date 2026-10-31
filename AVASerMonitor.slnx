@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AVASerMonitor.Core/AVASerMonitor.Core.csproj" />
+    <Project Path="src/AVASerMonitor/AVASerMonitor.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/AVASerMonitor.Tests/AVASerMonitor.Tests.csproj" />
+  </Folder>
+</Solution>
